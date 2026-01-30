@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practiseJSON</title>
+</head>
+<style>
+    #greeting{
+        background-color: aqua;
+    }
+    #mybutton{
+        height: 50px;
+        width: 50px;
+        font-size: 28px;
+        border-radius: 5px;
+    }
+    .js-odd{
+        background-color: gold;
+    }
+    .js-even{
+        background-color:greenyellow;
+    }
+</style>
+<body>
+    <h3 id="greeting"></h3>
+    <button id="mybutton" onclick="buttonpressed();">0  </button>
+    <script>
+    let noofclicked=0;
+    function buttonpressed(){
+        let button=document.querySelector('#mybutton');
+        noofclicked++;
+        if(noofclicked %2===0){
+            button.classList.remove('js-odd');
+            button.classList.add('js-even');
+        }
+        else{
+           button.classList.add('js-odd');
+            button.classList.remove('js-even'); 
+        }
+        button.innerText=noofclicked;
+    }
+        function doGreeting(personName){
+        let date=new Date();
+        let hours=date.getHours();
+        let heading = document.querySelector(`#greeting`);
+        if(hours>5 && hours<12){
+         heading.innerText=`Good Morning ${personName}` ;
+        }
+        else if(hours>12 && hours<18){
+        heading.innerText=` Good Afternoon ${personName}`;
+        }
+        else{
+        heading.innerText=`Good Night ${personName}`;
+        }
+    }
+    doGreeting('')
+    </script>
+</body>
+</html>
