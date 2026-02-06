@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>arrayloop</title>
+    <title>sum</title>
 </head>
 <body>
     <script>
-        let nums=[1,2,4,3,5,7,6];
-        for(let index=0;index<nums.length;index++){
-            console.log(nums[index]);
+        let arr=[1,2,3,5,4,6];
+        let sum=0;
+        for(let i=0;i<arr.length;i++){
+            sum=sum+arr[i];
         }
+        console.log(' sum of the array is ='+sum);
     </script>
 </body>
 </html>
